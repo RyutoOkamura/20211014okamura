@@ -383,8 +383,10 @@ header {
 }
 
 /* コンタクト部分 */
-.contact-item {
+.contact-wrapper {
   background-color: #f5f6f9;
+}
+.contact-item {
   padding: 40px 0;
 }
 
@@ -410,7 +412,14 @@ header {
   padding: 10px;
   width: 300px;
   margin: 40px auto 0;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-item {
+    width: 85%;
+    margin: 0 auto;
+  }
 }
 
 /* フッター部分 */
@@ -454,12 +463,13 @@ footer {
 
 @media screen and (max-width: 768px) {
   .footer-wrapper {
-    display: block;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .footer-nav-list {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .footer-left {

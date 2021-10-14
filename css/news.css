@@ -268,12 +268,13 @@ footer {
 
 @media screen and (max-width: 768px) {
   .footer-wrapper {
-    display: block;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .footer-nav-list {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .footer-left {
