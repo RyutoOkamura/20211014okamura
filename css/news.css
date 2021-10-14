@@ -1,0 +1,292 @@
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.wrap {
+  width: 85%;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ヘッダー部分 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 30px;
+  background-color: #fff;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.header-left a {
+  font-size: 24px;
+  width: 80px;
+  color: inherit;
+}
+
+.header-right-list {
+  display: flex;
+  font-weight: bold;
+}
+
+.header-right-list li {
+  list-style: none;
+}
+
+.header-right-item a {
+  color: inherit;
+}
+
+.header-right-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.menu {
+  display: none;
+}
+.drawer-nav {
+  display: none;
+}
+
+/* ドロワーメニュー */
+@media screen and (max-width: 768px) {
+  .header-right {
+    display: none;
+  }
+
+  .menu {
+    display: inline-block;
+    width: 36px;
+    height: 32px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+
+  .menu__line--top,
+  .menu__line--middle,
+  .menu__line--bottom {
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+    transition: 0.5s;
+  }
+
+  .menu__line--top {
+    top: 0;
+  }
+
+  .menu__line--middle {
+    top: 14px;
+  }
+
+  .menu__line--bottom {
+    bottom: 0;
+  }
+
+  .menu.open span:nth-of-type(1) {
+    top: 14px;
+    transform: rotate(45deg);
+  }
+
+  .menu.open span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .menu.open span:nth-of-type(3) {
+    top: 14px;
+    transform: rotate(-45deg);
+  }
+
+  .drawer-nav {
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    background: #fff;
+    transition: 0.7s;
+  }
+
+  .drawer-nav-list {
+    padding-top: 80px;
+    text-align: center;
+  }
+
+  .drawer-nav-item {
+    margin-top: 40px;
+    font-size: 18px;
+  }
+
+  .drawer-nav-item {
+    list-style: none;
+  }
+
+  .drawer-nav-item a {
+    color: #0033cc;
+  }
+
+  .in {
+    transform: translateX(100%);
+  }
+}
+
+/* サブビュワー部分 */
+.suv-mv {
+  display: flex;
+  background: url(../img/mv.png) center/cover;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+}
+
+.suv-mv h1 {
+  font-size: 30px;
+  color: white;
+}
+
+/* コンタクト部分 */
+.contact-wrapper {
+  background-color: #f5f6f9;
+}
+
+.contact-item {
+  padding: 40px 0;
+}
+
+.contact-ttl {
+  font-size: 30px;
+  color: #000;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 15px;
+}
+
+.contact-item p {
+  text-align: center;
+}
+
+.contact-item a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: #cd0224;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  width: 300px;
+  margin: 40px auto 0;
+  margin-bottom: 40px;
+}
+
+/* ニュース部分 */
+.news-wrapper {
+  padding: 80px 0;
+}
+
+.news-container {
+  width: 75%;
+}
+
+.news-btn {
+  padding: 20px 20px;
+  display: flex;
+  color: #000;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .news-container {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .news-btn {
+    padding: 10px 10px;
+  }
+}
+
+/* フッター部分 */
+footer {
+  background-color: #222;
+  padding: 20px 0;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.footer-nav-list {
+  display: flex;
+}
+
+.footer-wrapper {
+  color: white;
+}
+
+.footer-nav-item::after {
+  content: "|";
+  color: #fff;
+  padding: 0 10px;
+}
+
+.footer-nav-item:last-child::after {
+  display: none;
+}
+
+.footer-nav-list li {
+  list-style: none;
+}
+
+.footer-nav-list a {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-wrapper {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-nav-list {
+    display: block;
+  }
+
+  .footer-left {
+    margin: 0 auto;
+  }
+
+  .footer-nav-item {
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .footer-nav-item:after {
+    display: none;
+  }
+}
